@@ -7,6 +7,7 @@ import delicateBottle from './assets/delicate-bottle.webp';
 import mediumBottle from './assets/medium-bottle.webp';
 import boldBottle from './assets/bold-bottle.webp';
 
+    
 export const cartItems = [{
     id: '123',
     name: 'Basil',

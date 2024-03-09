@@ -5,6 +5,7 @@ import * as VueRouter from 'vue-router'
 import ProductsPage from './pages/ProductsPage.vue';
 import ProductDetailPage from './pages/ProductDetailPage.vue';
 import ShoppingCartPage from './pages/ShoppingCartPage.vue';
+import NotFoundPage from './pages/NotFoundPage.vue';
 
 createApp(App)
 .use(VueRouter.createRouter({
@@ -14,11 +15,14 @@ createApp(App)
         component: ShoppingCartPage,
     }, {
         path: '/products',
-        component: ProductsPage
+        component: ProductsPage,
 
     }, {
         path: '/products/:productId',
-        component: ProductDetailPage
+        component: ProductDetailPage,
+    }, {
+        path: '/:pathMatch(.*)*',
+        component: NotFoundPage,
     }
 ]
 }))
